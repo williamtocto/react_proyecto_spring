@@ -37,9 +37,11 @@ const ProductList = () => {
           footer={footer}
         >
           <Column field="_id" header="Id" />
+          <Column field="id" header="Ids" />
           <Column field="name" header="Nombre" />
-          <Column field="price" header="Precio" />
-          <Column field="expiry_date" header="Fecha de Caducidad" />
+          <Column field="precio" header="Precio" />
+          <Column field="cantidad" header="Fecha de Caducidad" />
+          <Column field="descripcion" header="Fecha de Caducidad" />
         </DataTable>
       </Panel>
       <ProductForm isVisible={isVisible} setIsVisible={setIsVisible} />

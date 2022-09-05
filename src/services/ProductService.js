@@ -1,23 +1,22 @@
-import axios from "axios";
+import axios from 'axios';
+export class ProductService{
+baseUrl = "https://springapimongo.herokuapp.com/api/"
 
-export class ProductService {
+create(producto){
+    return axios.post(this.baseUrl+"producto/",producto).then(res => res.data);
 
-    // baseUrl = "http://localhost:8080/api/products/";
-    baseUrl = "https://hg-rest-api.herokuapp.com/api/products/";
+}
+readAll(){
+    return axios.get(this.baseUrl).then(res => res.data);
 
-    create(product){
-        return axios.post(this.baseUrl+"product/", product).then(res => res.data);
-    }
+}
+update(producto){
+    return axios.put(this.baseUrl+"producto/"+producto._id,producto).then(res => res.data);
 
-    readAll(){
-        return axios.get(this.baseUrl).then(res => res.data);
-    }
+}
+delete(id){
+    return axios.post(this.baseUrl+"producto/"+id).then(res => res.data);
+}
 
-    update(product){
-        return axios.put(this.baseUrl+"product/"+product._id, product).then(res => res.data);
-    }
 
-    delete(id){
-        return axios.delete(this.baseUrl+"product/"+id).then(res => res.data);
-    }
 }
