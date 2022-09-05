@@ -2,6 +2,8 @@ import axios from 'axios';
 export class ProductService{
 baseUrl = "https://springapimongo.herokuapp.com/api/"
 
+//william tocto
+
 create(producto){
     return axios.post(this.baseUrl+"producto/",producto).then(res => res.data);
 
