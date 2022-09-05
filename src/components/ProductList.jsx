@@ -40,8 +40,8 @@ const ProductList = () => {
           <Column field="id" header="Ids" />
           <Column field="name" header="Nombre" />
           <Column field="precio" header="Precio" />
-          <Column field="cantidad" header="Fecha de Caducidad" />
-          <Column field="descripcion" header="Fecha de Caducidad" />
+          <Column field="cantidad" header="Cantidad" />
+          <Column field="descripcion" header="Descripcion" />
         </DataTable>
       </Panel>
       <ProductForm isVisible={isVisible} setIsVisible={setIsVisible} />
